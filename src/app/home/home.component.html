@@ -2,8 +2,12 @@
     <h2>Adicione um Professor ou um Aluno</h2>
     <button (click)="ativarDesativarProfessorForm() ">Adicionar um Professor</button>
     <div *ngIf="professorForm; else professor">
-        <form >
-            <input type="text" placeholder="professor">
+        <form [formGroup]="cadastrarProfessorForm" (submit)="cadastrarProfessor()" >
+            <input type="text" placeholder="professor" formControlName="nome">
+            <input type="number" placeholder="idade" formControlName="idade">
+            <input type="email" placeholder="email" formControlName="email">
+            <input type="text" placeholder="curso" formControlName="curso">
+            <button [disabled] = "cadastrarProfessorForm.invalid" type="submit">Cadastrar Professor</button>
         </form>
     </div>
     <ng-template #professor >

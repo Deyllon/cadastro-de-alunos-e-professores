@@ -6,10 +6,11 @@ import { AlunosComponent } from './alunos/alunos.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ProfessoresComponent } from './professores/professores.component';
 
 
 @NgModule({
-  declarations: [AppComponent, AlunosComponent, HomeComponent],
+  declarations: [AppComponent, AlunosComponent, HomeComponent, ProfessoresComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
