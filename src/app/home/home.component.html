@@ -1,0 +1,25 @@
+<section>
+    <h2>Adicione um Professor ou um Aluno</h2>
+    <button (click)="ativarDesativarProfessorForm() ">Adicionar um Professor</button>
+    <div *ngIf="professorForm; else professor">
+        <form >
+            <input type="text" placeholder="professor">
+        </form>
+    </div>
+    <ng-template #professor >
+        <div></div>
+    </ng-template>
+    <button (click)="ativarDesativarAlunoForm()">Adicionar um Aluno</button>
+    <div *ngIf="alunoForm; else aluno">
+        <form [formGroup]="cadastrarAlunoForm" (submit)="cadastrarAluno()" >
+            <input type="text" placeholder="aluno" formControlName="nome">
+            <input type="number" placeholder="idade" formControlName="idade">
+            <input type="email" placeholder="email" formControlName="email">
+            <input type="text" placeholder="curso" formControlName="curso">
+            <button [disabled] = "cadastrarAlunoForm.invalid" type="submit">Cadastrar Aluno</button>
+        </form>
+    </div>
+    <ng-template #aluno >
+        <div></div>
+    </ng-template>
+</section>
