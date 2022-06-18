@@ -1,20 +1,22 @@
-<section>
-    <h2>Lista de Professores</h2>
-    <table>
-        <thead>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Email</th>
-            <th>Curso</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let professor of professores">
-                <td>{{professor.nome}}</td>
-                <td>{{professor.idade}}</td>
-                <td>{{professor.email}}</td>
-                <td>{{professor.curso}}</td>
-            </tr>
-        </tbody>
-    </table>
+<section class="section__professores">
+    <h2 class="titulo__professores">Lista de Professores</h2>
+    <div class="div__professores">
+        <table class="tabela__professores">
+            <thead>
+                <th class="conteudo__professores">Nome</th>
+                <th class="conteudo__professores">Idade</th>
+                <th class="conteudo__professores">Email</th>
+                <th class="conteudo__professores">Curso</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let professor of professores">
+                    <td class="conteudo__professores">{{professor.nome}}</td>
+                    <td class="conteudo__professores">{{professor.idade}}</td>
+                    <td class="conteudo__professores">{{professor.email}}</td>
+                    <td class="conteudo__professores">{{professor.curso}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 

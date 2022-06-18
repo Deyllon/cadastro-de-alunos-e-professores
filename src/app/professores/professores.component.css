@@ -1,0 +1,26 @@
+.section__professores{
+    position: relative;
+    top: 3rem;
+    width: 100%;
+}
+.titulo__professores{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.div__professores{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conteudo__professores{
+    width: 11rem;
+    text-align: center;
+    padding: 0.3rem 0;
+    font-weight: bold;
+    border: 1px solid;
+}
+.tabela__professores{
+    margin: 1rem 0;
+    border: 1px solid;
+}

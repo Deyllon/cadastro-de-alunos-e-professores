@@ -1,0 +1,28 @@
+.section__home{
+    text-align: center;
+    margin: 1rem 0;
+}
+.titulo__home{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.div__home{
+    margin: 0.5rem;
+}
+.button__home{
+    margin: 0 0.5rem;
+}
+.button__home:hover{
+    cursor: pointer;
+}
+.cadastro__home{
+    display: flex;
+    flex-direction: column;
+    margin: 0 35%;
+}
+.input__home{
+    margin: 0.3rem 0;
+}
+.input__home--button:hover{
+    cursor: pointer;
+}

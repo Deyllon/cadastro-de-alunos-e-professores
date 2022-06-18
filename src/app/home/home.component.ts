@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   public cadastrarAlunoForm!: FormGroup;
   public cadastrarProfessorForm!: FormGroup;
   public professorForm: boolean = false;
-  public alunoForm: boolean = false;
+  public alunoForm: boolean = true;
   @Output() alunoCadastrado = new EventEmitter<Pessoa>();
   @Output() professorCadastrado = new EventEmitter<Pessoa>();
   
@@ -37,20 +37,14 @@ export class HomeComponent implements OnInit {
   }
 
   public ativarDesativarProfessorForm(): boolean{
-    if (this.professorForm === false){
-      this.professorForm = true;
-      return this.professorForm;
-    }
-    this.professorForm = false;
-    return this.professorForm;
+    this.alunoForm = false
+    this.professorForm = true
+    return this.professorForm
   }
   public ativarDesativarAlunoForm(): boolean{
-    if (this.alunoForm === false){
-      this.alunoForm = true;
-      return this.alunoForm
-    }
-    this.alunoForm = false;
-    return this.alunoForm;
+    this.professorForm = false
+    this.alunoForm =true 
+    return this.alunoForm
   }
   public cadastrarAluno(): void{
     if(this.cadastrarAlunoForm.valid){

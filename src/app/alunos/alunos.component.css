@@ -1,0 +1,26 @@
+.section__alunos{
+    
+    top: 15rem;
+    width: 100%;
+}
+.titulo__alunos{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.div__alunos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conteudo__alunos{
+    width: 11rem;
+    text-align: center;
+    padding: 0.3rem 0;
+    font-weight: bold;
+    border: 1px solid;
+}
+.tabela__alunos{
+    margin: 1rem 0;
+    border: 1px solid;
+}

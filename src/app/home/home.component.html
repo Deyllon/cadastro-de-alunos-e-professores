@@ -1,26 +1,29 @@
-<section>
-    <h2>Adicione um Professor ou um Aluno</h2>
-    <button (click)="ativarDesativarProfessorForm() ">Adicionar um Professor</button>
+<section class="section__home">
+    <h2 class="titulo__home">Adicione um Professor ou um Aluno</h2>
+    <div class="div__home">
+        <button class="button__home" (click)="ativarDesativarProfessorForm() ">Adicionar um Professor</button>
+        
+        <button class="button__home" (click)="ativarDesativarAlunoForm()">Adicionar um Aluno</button>
+    </div>
     <div *ngIf="professorForm; else professor">
-        <form [formGroup]="cadastrarProfessorForm" (submit)="cadastrarProfessor()" >
-            <input type="text" placeholder="professor" formControlName="nome">
-            <input type="number" placeholder="idade" formControlName="idade">
-            <input type="email" placeholder="email" formControlName="email">
-            <input type="text" placeholder="curso" formControlName="curso">
-            <button [disabled] = "cadastrarProfessorForm.invalid" type="submit">Cadastrar Professor</button>
+        <form class="cadastro__home" [formGroup]="cadastrarProfessorForm" (submit)="cadastrarProfessor()" >
+            <input class="input__home" type="text" placeholder="professor" formControlName="nome">
+            <input class="input__home" type="number" placeholder="idade" formControlName="idade">
+            <input class="input__home" type="email" placeholder="email" formControlName="email">
+            <input class="input__home" type="text" placeholder="curso" formControlName="curso">
+            <button class="input__home input__home--button" [disabled] = "cadastrarProfessorForm.invalid" type="submit">Cadastrar Professor</button>
         </form>
     </div>
     <ng-template #professor >
         <div></div>
     </ng-template>
-    <button (click)="ativarDesativarAlunoForm()">Adicionar um Aluno</button>
     <div *ngIf="alunoForm; else aluno">
-        <form [formGroup]="cadastrarAlunoForm" (submit)="cadastrarAluno()" >
-            <input type="text" placeholder="aluno" formControlName="nome">
-            <input type="number" placeholder="idade" formControlName="idade">
-            <input type="email" placeholder="email" formControlName="email">
-            <input type="text" placeholder="curso" formControlName="curso">
-            <button [disabled] = "cadastrarAlunoForm.invalid" type="submit">Cadastrar Aluno</button>
+        <form class="cadastro__home" [formGroup]="cadastrarAlunoForm" (submit)="cadastrarAluno()" >
+            <input class="input__home" type="text" placeholder="aluno" formControlName="nome">
+            <input class="input__home" type="number" placeholder="idade" formControlName="idade">
+            <input class="input__home" type="email" placeholder="email" formControlName="email">
+            <input class="input__home" type="text" placeholder="curso" formControlName="curso">
+            <button class="input__home input__home--button" [disabled] = "cadastrarAlunoForm.invalid" type="submit">Cadastrar Aluno</button>
         </form>
     </div>
     <ng-template #aluno >
